@@ -110,4 +110,6 @@ var swiper1=new Swiper(".timenav",{
 function title(){
 	console.log("这是20161128-film1-title分支上定义的方法")
 };
-
+function addjs(){
+	console.log("这是20161129-film1-addjs分支定义的方法");
+}
