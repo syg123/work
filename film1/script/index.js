@@ -106,4 +106,8 @@ var swiper1=new Swiper(".timenav",{
 		$(".nav_ul li").eq(a.clickedIndex).addClass("active").siblings().removeClass("active");
 		swiper1.slideTo(a.clickedIndex,300);//默认走到当前点击的li
 	}
-})
+});
+function title(){
+	console.log("这是20161128-film1-title分支上定义的方法")
+};
+
