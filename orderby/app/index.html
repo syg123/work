@@ -16,16 +16,16 @@
 		<table>
 			<thead>
 				<tr>
-					<td ng-click="addClass($event)">FirstName  <span></span></td>
-					<td  ng-click="addClass($event)">LastName <span></span></td>
-					<td  ng-click="addClass($event)">Gender <span></span></td>
-					<td  ng-click="addClass($event)">Salary <span></span></td>
-					<td  ng-click="addClass($event)" >Salary <span></span></td>
-					<td  ng-click="addClass($event)">Birthday <span></span></td>
+					<td  ng-click="setSort('FirstName')">FirstName  <span ng-class="setClss('FirstName')"></span></td>
+					<td ng-click="setSort('LastName')">LastName <span ng-class="setClss('LastName')"></span></td>
+					<td ng-click="setSort('Gender')">Gender <span ng-class="setClss('Gender')"></span></td>
+					<td ng-click="setSort('Salary')">Salary <span ng-class="setClss('Salary')" ></span></td>
+					<td  ng-click="setSort('salary')" >Salary <span ng-class="setClss('salary')"></span></td>
+					<td ng-click="setSort('Birthday')">Birthday <span ng-class="setClss('Birthday')"></span></td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="data in datas | filter:first:obj | filter:last:obj | orderBy:order">
+				<tr ng-repeat="data in datas | filter:first:obj | filter:last:obj | orderBy:common:flag">
 					<td>{{data.FirstName}}</td>
 					<td>{{data.LastName}}</td>
 					<td>{{data.Gender}}</td>

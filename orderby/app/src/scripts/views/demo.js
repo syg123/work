@@ -58,18 +58,10 @@ myApp.controller("demo", ["$scope", function($scope) {
 			return true;
 		}
 	}
-	$scope.addClass=function(event){
-		var target = event.target;
-		$(target).siblings().find("span").removeClass();
-		if($(target).find("span").hasClass("desc")){
-			$(target).find("span").removeClass("desc")
-			$(target).find("span").addClass("asc")
-			$scope.order = $(target).text();
-		}else{
-			$(target).find("span").removeClass("asc")
-			$(target).find("span").addClass("desc")
-			$scope.order = "-"+ $(target).text();			
-		}
+	$scope.common = "FirstName";
+	$scope.flag = true;
+	$scope.setSort = function(common){
+		
 	}
 }]);
 
