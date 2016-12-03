@@ -7,29 +7,29 @@ myApp.controller("demo", ["$scope", function($scope) {
 			FirstName:"FANG",
 			LastName:"vane",
 			Gender:"Male",
-			Salary:"12333.50",
-			salary:"￥12333.5",
+			Salary:12333.50,
+			salary:12333.5,
 			Birthday:"2017-07-11"
 		},{
 			FirstName:"SARA",
 			LastName:"rose",
 			Gender:"Female",
-			Salary:"23334.23",
-			salary:"￥23334.2",
+			Salary:232334.23,
+			salary:232334.2,
 			Birthday:"1997-02-01"
 		},{
 			FirstName:"AAM",
 			LastName:"hot",
 			Gender:"Male",
-			Salary:"66880.50",
-			salary:"￥66880.5",
+			Salary:66880.50,
+			salary:66880.5,
 			Birthday:"1986-03-04"
 		},{
 			FirstName:"MARK",
 			LastName:"bear",
 			Gender:"Male",
-			Salary:"68000.00",
-			salary:"￥68000.0",
+			Salary:68000.00,
+			salary:68000.0,
 			Birthday:"1968-03-22"
 		}	
 	
