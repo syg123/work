@@ -58,10 +58,16 @@ myApp.controller("demo", ["$scope", function($scope) {
 			return true;
 		}
 	}
-	$scope.common = "FirstName";
-	$scope.flag = true;
-	$scope.setSort = function(common){
-		
+	$scope.column = "FirstName";
+	$scope.flag = false;
+	$scope.setSort = function(column){
+		$scope.flag = $scope.column == column?!$scope.flag:false;
+		$scope.column = column;
+	}
+	$scope.setClass = function(column){
+		if($scope.column==column){
+			return $scope.flag? "desc":"asc";
+		}
 	}
 }]);
 
