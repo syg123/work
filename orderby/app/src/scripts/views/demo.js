@@ -58,23 +58,18 @@ myApp.controller("demo", ["$scope", function($scope) {
 			return true;
 		}
 	}
-	$scope.addClass=function(){
-		$(event.target).siblings().find("span").removeClass();
-		
-		if($(event.target).find("span").hasClass("desc")){
-			$(event.target).find("span").removeClass("desc")
-			$(event.target).find("span").addClass("asc")
-			$scope.order = $(event.target).text();
+	$scope.addClass=function(event){
+		var target = event.target;
+		$(target).siblings().find("span").removeClass();
+		if($(target).find("span").hasClass("desc")){
+			$(target).find("span").removeClass("desc")
+			$(target).find("span").addClass("asc")
+			$scope.order = $(target).text();
 		}else{
-			$(event.target).find("span").removeClass("asc")
-			$(event.target).find("span").addClass("desc")
-			$scope.order = "-"+ $(event.target).text();
-			
+			$(target).find("span").removeClass("asc")
+			$(target).find("span").addClass("desc")
+			$scope.order = "-"+ $(target).text();			
 		}
-			
-		console.log($scope.order)
-		///$(event.target).find("span").tigclass("class","desc")
-		/**/
 	}
 }]);
 
