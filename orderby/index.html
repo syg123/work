@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="./app/prd/styles/app.css" />
+</head>
+<body>
+	<div ng-controller='demo' class="box">
+		<p>
+			<input type="text" placeholder="search firstName" ng-model="firstval"/>
+			<input type="text" placeholder="search lastName" ng-model="lastval"/>
+			<label><input type="checkbox" name="" id="checked" />Exact Mathch</label>
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<td ng-click="addClass($event)">FirstName  <span></span></td>
+					<td  ng-click="addClass($event)">LastName <span></span></td>
+					<td  ng-click="addClass()">Gender <span></span></td>
+					<td  ng-click="addClass()">Salary <span></span></td>
+					<td  ng-click="addClass()" >Salary <span></span></td>
+					<td  ng-click="addClass()">Birthday <span></span></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="data in datas | filter:first:obj | filter:last:obj | orderBy:order">
+					<td>{{data.FirstName}}</td>
+					<td>{{data.LastName}}</td>
+					<td>{{data.Gender}}</td>
+					<td>{{data.Salary}}</td>
+					<td>{{data.salary}}</td>
+					<td>{{data.Birthday}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="./app/libs/jquery1.7.js"></script>
+	<script src="./app/libs/angular.js"></script>
+	<script src="./app/prd/scripts/app.js"></script>
+</body>
+</html>
